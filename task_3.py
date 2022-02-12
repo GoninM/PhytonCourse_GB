@@ -3,6 +3,8 @@
 # Например, пользователь ввёл число 3.
 # Считаем 3 + 33 + 333 = 369.
 
+
+#вариант 1
 n = int(input('Введите число n:'))
 
 degree = 0
@@ -14,6 +16,16 @@ while n_copy > 0:
 
 nn = (10 ** degree) * n + n
 nnn = nn + (100 ** degree) * n
+result = n + nn + nnn
+
+print(f'{n} + {nn} + {nnn} = {result}')
+
+#вариант 2
+n = input('Введите число n:')
+nn = int(n * 2)
+nnn = int(n * 3)
+n = int(n)
+
 result = n + nn + nnn
 
 print(f'{n} + {nn} + {nnn} = {result}')
