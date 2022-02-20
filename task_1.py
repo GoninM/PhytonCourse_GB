@@ -2,11 +2,10 @@
 # Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
 
 def division(dividend, divider):
-    if divider == 0:
-        return 'Ошибка! деление на 0'
-    else:
+    try:
         return dividend/divider
-
+    except ZeroDivisionError:
+        return 'Ошибка! Деление на ноль!'
 
 number_1 = int(input('Введите делимое: '))
 number_2 = int(input('Введите делитель: '))
