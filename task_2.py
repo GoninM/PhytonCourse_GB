@@ -3,7 +3,7 @@
 # Функция должна принимать параметры как именованные аргументы.
 # Осуществить вывод данных о пользователе одной строкой.
 
-def print_user_param_in_one_string(first_name='', last_name='', birth_year='', city='', email='', phone_number=''):
+def print_user_param_in_one_string(first_name, last_name, birth_year, city, email, phone_number):
     print(f'{first_name} {last_name},  {birth_year}, {city}, email: {email}, phone number:{phone_number}')
 
 
