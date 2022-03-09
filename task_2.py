@@ -15,7 +15,6 @@ from abc import ABC, abstractmethod
 
 class Clothes(ABC):
     def __init__(self, name):
-        # print('parent init')
         self.name = name
 
     @abstractmethod
@@ -25,24 +24,25 @@ class Clothes(ABC):
 
 class Coat(Clothes):
     def __init__(self, name, size):
-        # print('child coat init')
-        super().__init__(name)
         self.v = size
+        self.consumption = self.v / 6.5 + 0.5
+        super().__init__(name)
+
 
     @property
     def calc(self):
-        return self.v / 6.5 + 0.5
+        return self.consumption
 
 
 class Costume(Clothes):
     def __init__(self, name,  height):
-        # print('child costume init')
-        super().__init__(name)
         self.h = height
+        self.consumption = self.h * 2 + 0.3
+        super().__init__(name)
 
     @property
     def calc(self):
-        return self.h*2 + 0.3
+        return self.consumption
 
 
 coat_1 = Coat('coat 1', 5)
@@ -50,4 +50,5 @@ print(coat_1.calc)
 
 costume_1 = Costume('costume 1', 100)
 print(costume_1.calc)
+
 
