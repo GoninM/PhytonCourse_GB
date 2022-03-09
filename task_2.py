@@ -12,13 +12,13 @@
 
 class Clothes:
     def __init__(self, name):
-        print('parrent init')
+        # print('parrent init')
         self.name = name
 
 
 class Coat(Clothes):
     def __init__(self, name, size):
-        print('child coat init')
+        # print('child coat init')
         super().__init__(name)
         self.v = size
 
@@ -29,7 +29,7 @@ class Coat(Clothes):
 
 class Costume(Clothes):
     def __init__(self, name,  height):
-        print('child costume init')
+        # print('child costume init')
         super().__init__(name)
         self.h = height
 
@@ -38,5 +38,9 @@ class Costume(Clothes):
         return self.h*2 + 0.3
 
 
+coat_1 = Coat('coat 1', 5)
+print(coat_1.calc)
 
+costume_1 = Costume('costume 1', 100)
+print(costume_1.calc)
 

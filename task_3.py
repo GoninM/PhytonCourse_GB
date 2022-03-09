@@ -42,7 +42,7 @@ class Cell:
         if other.num != 0:
             return self.num // other.num
         else:
-            return f'во второй клетке 0 ячеек'
+            return f'во второй клетке 0 ячеек. Деление невозможно'
 
     def make_order(self, cells_in_row):
         result_str = ''
@@ -60,7 +60,7 @@ class Cell:
 
 
 test_cell_1 = Cell(12)
-test_cell_2 = Cell(5)
+test_cell_2 = Cell(20)
 
 print(f'test_cell_1({test_cell_1.num}) + test_cell_2({test_cell_2.num}) = {test_cell_1 + test_cell_2}')
 print(f'test_cell_1({test_cell_1.num}) - test_cell_2({test_cell_2.num}) = {test_cell_1 - test_cell_2}')
