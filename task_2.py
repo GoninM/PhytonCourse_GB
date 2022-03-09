@@ -12,7 +12,7 @@
 
 class Clothes:
     def __init__(self, name):
-        # print('parrent init')
+        # print('parent init')
         self.name = name
 
 
