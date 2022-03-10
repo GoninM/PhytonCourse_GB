@@ -11,3 +11,29 @@
 # Во время ввода пользователем очередного элемента необходимо реализовать проверку типа элемента.
 # Вносить его в список, только если введено число. Класс-исключение должен не позволить пользователю ввести текст
 # (не число) и отобразить соответствующее сообщение. При этом работа скрипта не должна завершаться.
+
+class OwnIntException(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+result = []
+while True:
+    n = input('Введите число либо "stop" для остановки ввода: ')
+
+    if n == 'stop':
+        break
+
+    try:
+        if n.count('.') == 1:
+            if not n.replace('.', '').isdigit():
+                raise OwnIntException('Введено не число')
+        elif not n.isdigit():
+            raise OwnIntException('Введено не число')
+
+    except OwnIntException as err:
+        print(err)
+    else:
+        result.append(float(n))
+
+print(result)
